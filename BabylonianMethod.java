@@ -1,4 +1,5 @@
 import java.util.Scanner; //implementing the scanner class
+import static java.lang.Math.abs; //implementing math for absoulte value
 //Ancient method of finding the square root of numbers throught recersion trials 
 public class BabylonianMethod{
   public static void main(String[] args){
@@ -19,16 +20,15 @@ public class BabylonianMethod{
   }
   
   public void setErrorTolerated(double inputNumber, double errorTolerated, double userGuess){
-    double errorFrom = errorTolerated - inputNumber;
+    double errorFrom = userGuess - errorTolerated;
   }
   
   
   public static double SquareRoot(double inputNumber, double errorFrom, double userGuess)
   {
-    if(errorFrom = inputNumber - (userGuess*userGuess))
+    if(errorFrom >= abs(inputNumber - (userGuess*userGuess)))
       return userGuess;
-    else if(errorFrom > inputNumber - (userGuess*userGuess){
-      return userGuess = 0.5*((userGuess + inputNumber)/userGuess);
+    
+    return SquareRoot(inputNumber, errorFrom, (0.5*((userGuess + inputNumber)/userGuess)));
     }
-            }
 }
