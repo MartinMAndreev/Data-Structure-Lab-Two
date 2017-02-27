@@ -10,15 +10,25 @@ public class BabylonianMethod{
     System.out.println("Enter the amount of error you will tolerate for the answer to deviate from: ");
     double errorTolerated = keyboard.nextDouble();
     
-    System.out.println(SquareRoot(inputNumber, errorTolerated));
+    System.out.println("Guess what you think the square root might be: ");
+    double userGuess = keyboard.nextDouble();
+    
+    System.out.println(SquareRoot(inputNumber, errorTolerated, userGuess));
     
     keyboard.close();
   }
   
-  public static double SquareRoot(double inputNumber, double errorTolerated)
-  {
-    final double lastGuess;
-    lastGuess = inputNumber/2;
-    return lastGuess;
+  public void setErrorTolerated(double inputNumber, double errorTolerated, double userGuess){
+    double errorFrom = errorTolerated - inputNumber;
   }
+  
+  
+  public static double SquareRoot(double inputNumber, double errorFrom, double userGuess)
+  {
+    if(errorFrom = inputNumber - (userGuess*userGuess))
+      return userGuess;
+    else if(errorFrom > inputNumber - (userGuess*userGuess){
+      return userGuess = 0.5*((userGuess + inputNumber)/userGuess);
+    }
+            }
 }
